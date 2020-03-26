@@ -1,0 +1,10 @@
+// external sass files import
+@import 'header', 'utilities', 'var', 'footer', 'mobileMenu';
+
+// reset 
+html, body, * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}

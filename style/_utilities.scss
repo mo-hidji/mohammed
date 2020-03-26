@@ -1,0 +1,163 @@
+// standars 
+a {
+    text-decoration: none;
+    color: $main;
+    font-family: $font;
+    font-weight: 600;
+    transition: $transition;
+
+    &:hover {
+        color: darken($main, 10);
+    }
+}
+
+h1 {
+    font-family: $mainFont;
+}
+
+h2 {
+    margin: 10px 0;
+    font-family: $mainFont;
+}
+
+p {
+    font-family: $font;
+    font-weight: 550;
+    margin: 5px 0;
+}
+
+// extended classes
+
+// brand
+%brand {
+    a {
+        color: $light;
+        font-size: 2rem;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $main;
+        }
+    }
+}
+
+// menu
+%menu {
+    @extend %flex;
+
+    a {
+        color: $light;
+
+        &:hover {
+            color: $main;
+        }
+    }
+}
+
+// flex 
+%flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// flex center
+%flex-center-column {
+    @extend %flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+// flex center
+%flex-center {
+    @extend %flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+// bg position
+%bg-position{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+// btns and cta
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-family: $font;
+    text-transform: uppercase;
+    background-color: darken($light, 10);
+    color: $dark;
+    border: none;
+    cursor: pointer;
+    transition: $transition;
+    margin: 5px;
+
+    &:hover {
+        background-color: darken($light, 15);
+    }
+
+    @media only screen and (max-width: $tablet) {
+        font-size: 1rem !important;
+        padding: 10px 20px !important;
+    }
+
+    @media only screen and (max-width: $mobile) {
+        font-size: .7rem !important;
+        padding: 10px 20px !important;
+    }
+}
+
+.cta {
+    @extend .btn;
+    background-color: $main;
+    color: $light;
+    &:hover {
+        background-color: darken($main, 10);
+    }
+}
+
+// fixed navbar 
+.fixed {
+    position: fixed !important;
+    top: 0;
+    background: $dark !important;
+    transition: $transition;
+    padding: 10px 4% !important;
+    box-sizing: $shadow;
+}
+
+// active classe
+.active {
+    color: $main !important;
+    position: relative;
+    transition: $transition;
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        border-radius: 2px;
+        background-color: $main;
+        bottom: -20px;
+        left: 0;
+    }
+}
+
+// slick dots
+.slick-dots {
+    display: flex;
+    list-style-type: none;
+
+    li {
+        text-indent: -9999;
+        button {
+            text-indent: -9999;
+        }
+    }
+}

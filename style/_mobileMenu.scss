@@ -1,0 +1,78 @@
+// mobile navbar
+.mobile {
+    padding: 2% 4%;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    @extend %brand;
+    @extend %menu;
+
+    // toggler
+    .toggler {
+        .toggle {
+            border: none;
+            line-height: .2;
+            font-size: 1.6rem;
+            background: none;
+            color: $light;
+            cursor: pointer;
+        }
+    }
+
+    // hide on big screen
+    @media only screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+// sidebar
+.sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: $light;
+    z-index: 2000;
+    @extend %flex-center-column;
+    justify-content: start;
+    align-items: flex-start;
+    transform: translateX(-100%);
+    transition: .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    .title {
+        padding: 2% 8%;
+    }
+
+    // menu
+    .menu {
+        @extend %flex-center-column;
+        align-items: start;
+        padding: 2% 8%;
+
+        a {
+            margin: 10px 0;
+            color: $dark;
+
+            &:hover {
+                color: $main;
+            }
+        }
+    }
+
+    // close btn
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        color: $main;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+}
