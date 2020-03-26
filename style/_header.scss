@@ -47,11 +47,9 @@
             padding: 2%;
             z-index: 2;
             height: 80vh;
-
             position: relative;
             @extend %flex-center-column;
             @extend %bg-position;
-
 
             // overlay 
             &::after {
@@ -87,7 +85,6 @@
                 display: flex;
                 justify-content: space-evenly;
             }
-
         }
     }
 }

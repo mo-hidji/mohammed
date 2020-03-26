@@ -45,9 +45,10 @@ $(function() {
         autoplay: true,
         arrows: false,
         speed: 1500,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 1000,
         pauseOnFocus: true,
-        dots: true
+        dots: true,
+        fade: true
     });
 })
 

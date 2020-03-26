@@ -73,6 +73,12 @@
         color: $main;
         font-size: 1.2rem;
         cursor: pointer;
+        transition: .2s ease-out;
+        line-height: .22;
+
+        &:hover {
+            transform: rotate(180deg);
+        }
     }
 
 }

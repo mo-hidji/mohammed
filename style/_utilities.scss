@@ -149,15 +149,34 @@ p {
     }
 }
 
-// slick dots
+// slick
 .slick-dots {
-    display: flex;
+    display: flex; 
     list-style-type: none;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
 
     li {
-        text-indent: -9999;
         button {
-            text-indent: -9999;
+            text-indent: -9999px !important;
+            height: 10px;
+            width: 10px;
+            background-color: $light;
+            border: none;
+            padding: 0;
+            margin: 0 5px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+    
+    li.slick-active {
+        button {
+            transition: .2s ease-in-out;
+            background-color: $main;
+            transform: scale(1.3);
         }
     }
 }
